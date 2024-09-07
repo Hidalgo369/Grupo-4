@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gestionMaterias_[Didier Guaña].js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="refrescarMaterias()">
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="img/logoKrakeDev.png" width="80%">
+        </div>
+        <div class="area">
+            <div class="ingresoDatos">
+                <h3 class="tituloCampo">NOMBRE DE MATERIA</h3>
+                <input type="text" id="txtMateria">
+            </div>
+            <div class="ingresoDatos">
+                <h3 class="tituloCampo">CODIGO DE MATERIA</h3>
+                <input type="text" id="txtCodigo">
+            </div>
+
+            <div class="ingresoDatos">
+                <h3 class="tituloCampo">DESCRIPCION DE MATERIA</h3>
+                <input type="text" id="txtDescripcion">
+            </div>
+            <div class="ingresoDatos">
+                <h3 class="tituloCampo">BUSCAR MATERIA POR COINCIDENCIA</h3>
+                <input type="text" id="txtBuscar">
+            </div>
+        </div>
+    <br>
+        <div class="area">
+            <div class="botones">
+                <input type="button" value="GUARDAR" onclick="agregarMateria()" class="estiloBoton">
+                <input type="button" value="REFRESCAR" onclick="refrescarMaterias()" class="estiloBoton">
+                <input type="button" value="BUSCAR" onclick="buscarMaterias()" class="estiloBoton">
+
+            </div>
+            <br>
+            <div id="tablaMaterias" class="tablaEmpleados">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
