@@ -52,3 +52,20 @@ buscarEstudiante = function () {
     }
     return alert("Estudiante no encontrado");
 }
+
+eliminarMateria = function () {
+    buscarEliminar = recuperarTexto("txtEliminar");
+    let encontrado = false;
+    for (let i = 0; i < estudiantes.length; i++) {
+        if (estudiantes[i].nombre == buscarEliminar) {
+            estudiantes.splice(i, 1);
+            alert("Estudiante eliminado exitosamente");
+            refrescarEstudiante();
+            encontrado = true;
+        }
+        if (!encontrado) {
+            alert("El estudiante no se encontró");
+        }
+    }
+
+}
