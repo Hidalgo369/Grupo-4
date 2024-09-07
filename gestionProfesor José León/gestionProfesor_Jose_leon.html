@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="gestionProfesor_Jose_leon.js"></script>
+        <script src="utilitatios.js"></script>
+        <link href="estilo.css" rel="stylesheet"/>
+    </head>
+    
+    <body onload="ejecutarNuevoProfesor()">
+        <div id="divBotones">
+            <input type="button" value="REGISTRAR" onclick="ejecutarNuevoProfesor();">
+            <input type="button" value="TABLA DE REGISTRO" onclick="ejecutarRegistro();">
+
+        </div>
+        <div id="divContenido">
+            <div id="divRegistrar">
+                <h2>Registrar Profesor</h2>
+                <div>
+                    <input type="text" id="txtNombre" placeholder="nombre">
+                    <input type="text" id="txtEdad" placeholder="edad">
+                    <input type="text" id="txtEmail" placeholder="email">    
+                </div>
+                <div>
+                    <input type="button" value="GUARDAR" onclick="crearProfesor();"/>
+                    <input type="button" value="LIMPIAR" onclick="limpiarCampos();"/>
+                </div>
+                    <h2>Buscar Profesor</h2>
+                <div>
+                    <input type="text" id="txtBuscarProfesor" placeholder="ingrese su nombre">
+                    <input type="button" value="BUSCAR" onclick="buscarPorNombre();"/>  
+                </div>
+            </div>
+            <div id="divTabla">
+                <h2>Registro</h2>            
+                <div id="tablaProfesores"></div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+    

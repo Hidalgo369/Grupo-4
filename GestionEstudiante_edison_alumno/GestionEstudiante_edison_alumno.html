@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="GestionEstudiante_edison_alumno.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="GestionEstudiante_edison_alumno.css" />
+</head>
+
+<body onload="refrescarEstudiante();">
+
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="logoKrakeDev.png" width="50%" />
+        </div>
+        <div>
+            <h2>NOMBRE</h2>
+            <input type="text" id="txtNombre" />
+            <h2>CURSO</h2>
+            <input type="text" id="txtCurso" />
+            <h2>MATRICULA</h2>
+            <input type="text" id="txtMatricula" />
+            <div class="botones">
+                <input type="button" value="GUARDAR" class="estiloBoton" onclick="agregarEstudiante();" />
+                <input type="button" value="REFRESCAR" class="estiloBoton" onclick="refrescarEstudiante();" />
+            </div>
+        </div>
+
+        <div class="botones">
+            <input type="text" id="txtBuscar" />
+            <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarEstudiante();" />
+        </div>
+    </div>
+
+
+    <div id="tabla" class="areaTabla">
+
+    </div>
+</body>
+
+</html>
