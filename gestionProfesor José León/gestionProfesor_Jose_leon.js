@@ -89,3 +89,22 @@ function ejecutarRegistro(){
     mostrarCuentas();
     ocultarComponente("divRegistrar");
 }
+
+function eliminar(){
+    let nombre = recuperarTextoEnCaja("txtNombre");
+    for(obj of profesores){
+        if(obj.nombre === nombre){
+            delete (obj.nombre);
+            delete (obj.edad);
+            delete (obj.email);
+            alert("Porfesor eliminado");
+            break;
+        }else{
+            alert("No existe profesor registrado");
+        }
+        
+    }
+        
+    
+    ejecutarRegistro();
+}
