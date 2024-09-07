@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación</title>
+    <script src="unir.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body onload="materiap2();">
+    <input type="button" value="Gestion de Materias" onclick="materiap2();" />
+    <input type="button" value="Gestion de Estudiantes Parte 1" onclick="estudiantes1();" />
+    <input type="button" value="Gestion de Estudiantes Parte 2" onclick="estudiantes2();" />
+    <input type="button" value="Gestion de Profesor" onclick="profesor();" />
+    <div id="angel">
+        <div class="principal">
+            <div class="logoEscuela">
+            </div>
+            <div class="area">
+                <div class="ingresoDatos">
+                    <h3 class="tituloCampo">NOMBRE DE MATERIA</h3>
+                    <input type="text" id="txtMateria">
+                </div>
+                <div class="ingresoDatos">
+                    <h3 class="tituloCampo">CODIGO DE MATERIA</h3>
+                    <input type="text" id="txtCodigo">
+                </div>
+
+                <div class="ingresoDatos">
+                    <h3 class="tituloCampo">DESCRIPCION DE MATERIA</h3>
+                    <input type="text" id="txtDescripcion">
+                </div>
+                <div class="ingresoDatos">
+                    <h3 class="tituloCampo">BUSCAR MATERIA POR COINCIDENCIA</h3>
+                    <input type="text" id="txtBuscar">
+                </div>
+                <div class="ingresoDatos">
+                    <h3 class="tituloCampo">BUSCAR Y ELIMINAR MATERIA</h3>
+                    <input type="text" id="txtEliminar">
+
+                </div>
+            </div>
+            <br>
+            <div class="area">
+                <div class="botones">
+                    <input type="button" value="GUARDAR" onclick="agregarMateria()" class="estiloBoton">
+                    <input type="button" value="REFRESCAR" onclick="refrescarMaterias()" class="estiloBoton">
+                    <input type="button" value="BUSCAR" onclick="buscarMaterias()" class="estiloBoton">
+                    <input type="button" value="ELIMINAR" onclick="eliminarMateria()">
+                </div>
+                <br>
+                <div id="tablaMaterias" class="tablaEmpleados">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="leython">
+        <h1>Gestionar Estudiante</h1>
+        <div class="principal">
+            <div class="datos">
+                <h2>Nombre:</h2>
+                <input type="text" id="txtNombre" />
+                <h2>Curso:</h2>
+                <input type="text" id="txtCurso" />
+                <h2>Matricula:</h2>
+                <input type="text" id="txtMatricula" />
+               
+                <div class="botones">
+                    <input type="button" value="Guardar" onclick="agregarEstudiante();" />
+                    <input type="button" value="Refrescar" class="refrescar" onclick="refrescarEstudiante();" />
+                </div>
+            </div>
+            <div id="tabla" class="tabla"></div>
+            <div class="busqueda">
+                <h2>Ingrese el nombre del estudiante:</h2>
+                <input type="text" id="idEstudiante" />
+                <input type="button" value="Buscar" onclick="buscarEstudiante();">
+            </div>
+            <div>
+                <h2>Nombre del estudiante que desea eliminar:</h2>
+                <input type="text" id="txtEliminar" />
+                <input type="button" value="eliminar" onclick="eliminarMateria();" />
+            </div>
+        </div>
+    </div>
+    <div id="edison">
+        <div class="principal">
+            <div class="logoEscuela">
+
+            </div>
+            <div>
+                <h2>NOMBRE</h2>
+                <input type="text" id="txtNombre" />
+                <h2>CURSO</h2>
+                <input type="text" id="txtCurso" />
+                <h2>MATRICULA</h2>
+                <input type="text" id="txtMatricula" />
+                <h2>BUSCAR Y ELIMINAR</h2>
+                <input type="text" id="txtEliminar" />
+                <div class="botones">
+                    <input type="button" value="GUARDAR" class="estiloBoton" onclick="agregarEstudiante();" />
+                    <input type="button" value="REFRESCAR" class="estiloBoton" onclick="refrescarEstudiante();" />
+                    <input type="button" value="ELIMINAR" class="estiloBoton" onclick="limpiar();" />
+                </div>
+            </div>
+
+            <div class="botones">
+                <input type="text" id="txtBuscar" />
+                <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarEstudiante();" />
+            </div>
+        </div>
+
+
+        <div id="tabla" class="areaTabla">
+
+        </div>
+    </div>
+    <div id="jose">
+        <div id="divBotones">
+            <input type="button" value="REGISTRAR" onclick="ejecutarNuevoProfesor();">
+            <input type="button" value="TABLA DE REGISTRO" onclick="ejecutarRegistro();">
+
+        </div>
+        <div id="divContenido">
+            <div id="divRegistrar">
+                <h2>Registrar Profesor</h2>
+                <div>
+                    <input type="text" id="txtNombre" placeholder="nombre">
+                    <input type="text" id="txtEdad" placeholder="edad">
+                    <input type="text" id="txtEmail" placeholder="email">
+                </div>
+                <div>
+                    <input type="button" value="GUARDAR" onclick="crearProfesor();" />
+                    <input type="button" value="LIMPIAR" onclick="limpiarCampos();" />
+                </div>
+                <h2>Buscar Profesor</h2>
+                <div>
+                    <input type="text" id="txtBuscarProfesor" placeholder="ingrese su nombre">
+                    <input type="button" value="BUSCAR" onclick="buscarPorNombre();" />
+                    <input type="button" value="ELIMINAR" onclick="eliminar();" />
+                </div>
+            </div>
+            <div id="divTabla">
+                <h2>Registro</h2>
+                <div id="tablaProfesores"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

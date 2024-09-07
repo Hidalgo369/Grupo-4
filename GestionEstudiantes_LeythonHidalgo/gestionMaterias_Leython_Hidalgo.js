@@ -67,5 +67,4 @@ eliminarMateria = function () {
             alert("El estudiante no se encontró");
         }
     }
-
 }
