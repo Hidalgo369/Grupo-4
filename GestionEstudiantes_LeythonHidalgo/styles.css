@@ -1,0 +1,101 @@
+body{
+    background-color: rgba(115, 233, 233, 0.789);
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 40%;
+}
+
+.estiloBoton:hover {
+    background-color: white;
+    color: #217023;
+    border: 1px solid;
+    border-color: #217023;
+    border-radius: 5px;
+}
+
+.estiloBoton:active {
+    background-color: #217023;
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.refrescar {
+    margin-left: 10px;
+}
+
+.imagen {
+    width: auto;
+    height: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #b3b3b38e;
+}
+
+th,
+td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #270752;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+table caption {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+.imagen{
+    margin-top: 30px;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    text-align: center;
+    color: #270752;
+}

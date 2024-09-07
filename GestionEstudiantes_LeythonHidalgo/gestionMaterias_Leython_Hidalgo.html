@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="gestionMaterias_Leython_Hidalgo.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body onload="refrescarEstudiante();">
+    <h1>Gestionar Estudiante</h1>
+    <div class="principal">
+        <div class="datos">
+            <h2>Nombre:</h2>
+            <input type="text" id="txtNombre" />
+            <h2>Curso:</h2>
+            <input type="text" id="txtCurso" />
+            <h2>Matricula:</h2>
+            <input type="text" id="txtMatricula" />
+            <img src="estudiante.png" class="imagen"/>
+            <div class="botones">
+                <input type="button" value="Guardar" onclick="agregarEstudiante();" />
+                <input type="button" value="Refrescar" class="refrescar" onclick="refrescarEstudiante();" />
+            </div>
+        </div>
+        <div id="tabla" class="tabla"></div>
+        <div class="busqueda">
+            <h2>Ingrese el nombre del estudiante:</h2>
+            <input type="text" id="idEstudiante" />
+            <input type="button" value="Buscar" onclick="buscarEstudiante();">
+        </div>
+    </div>
+</body>
+
+</html>
