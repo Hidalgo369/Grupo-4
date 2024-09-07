@@ -14,9 +14,9 @@ agregarEstudiante = function () {
     let objetos;
     let objeto = crearEstudiante();
     console.log(objeto);
-    
+
 }
-refrescarEstudiante = function(){
+refrescarEstudiante = function () {
     let cmpTabla = document.getElementById("tabla");
     let contenidoTabla = "<table><tr>" +
         "<th>NOMBRE</th>" +
@@ -36,12 +36,24 @@ refrescarEstudiante = function(){
     cmpTabla.innerHTML = contenidoTabla;
 }
 
-buscarEstudiante=function(nombre){
-     nombre=recuperarTexto("txtBuscar");
-    for(let i=0;i<estudiantes.length;i++){
-        if(nombre==estudiantes[i].nombre){
+buscarEstudiante = function (nombre) {
+    nombre = recuperarTexto("txtBuscar");
+    for (let i = 0; i < estudiantes.length; i++) {
+        if (nombre == estudiantes[i].nombre) {
             return alert("Estudiante encontrado");
         }
     }
     return alert("Estudiante no encontrado")
+}
+limpiar = function () {
+    buscar = recuperarTexto("txtEliminar")
+    for(let i = 0;i<estudiantes.length;i++){
+        buscarEstudiantes = estudiantes[i]
+        if(buscar==buscarEstudiantes.nombre||buscar==buscarEstudiantes.curso||buscar==buscarEstudiantes.materias){
+            estudiantes.splice(i,1)}
+    }
+    refrescarEstudiante()
+    
+
+
 }
