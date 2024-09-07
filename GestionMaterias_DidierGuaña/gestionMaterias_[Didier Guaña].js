@@ -1,4 +1,9 @@
-let materias = []
+let materias = [
+    {nombre:"CIENCIAS",codigo:"01",descripcion:"Dirigida por:Mateo"},
+    {nombre:"FILOSOFIA",codigo:"02",descripcion:"Dirigida por:Leython"},
+    {nombre:"MATEMATICAS",codigo:"03",descripcion:"Dirigida por:Gallón"},
+    {nombre:"LITERATURA",codigo:"04",descripcion:"Dirigida por:Diego"}
+]
 
 
 crearMateria = function(){
@@ -45,4 +50,15 @@ buscarMaterias = function(){
     }else{
         alert("MATERIA ENCONTRADA")
     }
+}
+
+eliminarMateria = function(){
+    coincidencia = recuperarTexto("txtEliminar")
+    for(let i = 0;i<materias.length;i++){
+        materiaIterada = materias[i]
+        if(coincidencia==materiaIterada.codigo||coincidencia==materiaIterada.nombre||coincidencia==materiaIterada.descripcion){
+            materias.splice(i,1)}
+    }
+    refrescarMaterias()
+    
 }
