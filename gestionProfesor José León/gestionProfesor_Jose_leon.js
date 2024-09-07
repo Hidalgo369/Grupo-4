@@ -91,20 +91,11 @@ function ejecutarRegistro(){
 }
 
 function eliminar(){
-    let nombre = recuperarTextoEnCaja("txtNombre");
-    for(obj of profesores){
-        if(obj.nombre === nombre){
-            delete (obj.nombre);
-            delete (obj.edad);
-            delete (obj.email);
-            alert("Porfesor eliminado");
-            break;
-        }else{
-            alert("No existe profesor registrado");
-        }
-        
+    let nombre = recuperarTexto("txtNombre")
+    for(let i = 0;i<profesores.length;i++){
+        buscarProfesor = profesores[i]
+        if(nombre== buscarProfesor.nombre||nombre== buscarProfesor.edad||nombre== buscarProfesor.email){
+            profesores.splice(i,1)}
     }
-        
-    
     ejecutarRegistro();
 }
